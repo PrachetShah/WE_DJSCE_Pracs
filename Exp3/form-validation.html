@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/2acadc56fe.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <script>
+      const formValidate = () => {
+        let fName = document.getElementById("fName").value;
+        let lName = document.getElementById("lName").value;
+
+        let email = document.getElementById("email").value;
+        let re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        let val = re.test(email);
+
+        let number = document.getElementById("number").value;
+
+        let pass = document.getElementById("pass").value;
+        let Cpass = document.getElementById("Cpass").value;
+        console.log(pass, Cpass);
+
+        if (fName === "" || lName === "") {
+          alert("Name Field cannot be left blank");
+        } else if (email === "" || !re.test(email)) {
+          alert("Email Not Valid");
+        } else if (number === "" || number.length > 10) {
+          alert("Number not Valid");
+        } else if (pass == "" || Cpass == "") {
+          alert("Password not Valid");
+        } else if (pass !== Cpass) {
+          alert("Both Passwords do not match");
+        } else {
+          alert("Form Submitted Successfully");
+        }
+      };
+    </script>
+
+    <title>Hello, world!</title>
+  </head>
+  <body
+    style="
+      background: rgb(131, 58, 180);
+      background: linear-gradient(
+        90deg,
+        rgba(131, 58, 180, 1) 0%,
+        rgba(253, 29, 29, 1) 50%,
+        rgba(252, 176, 69, 1) 100%
+      );
+    "
+  >
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="form.png" alt="" width="60" height="70" />
+        </a>
+        <a class="navbar-brand mb-0 h1 fs-1" href="#">Prachet Shah</a>
+      </div>
+    </nav>
+
+    <h1 class="text-center py-4 text-light">VIP Registration</h1>
+    <h5 class="text-center py-1 text-light">
+      Fields with<span class="text-light"> * </span>are compulsory
+    </h5>
+
+    <div class="text-center row container-fluid d-flex">
+      <!-- <div class="col text-center">
+        <div class="py-1 m-#">
+          <label class="py-3">Prefix</label>
+          <input type="text" />
+        </div> -->
+
+      <div class="py-4">
+        <label class="text-light">Name<span class="text-light"> *</span></label>
+        <input
+          type="text"
+          placeholder="FirstName"
+          style="width: 7em"
+          id="fName"
+        />
+        <input
+          type="text"
+          placeholder="LastName"
+          style="width: 7em"
+          id="lName"
+        />
+      </div>
+
+      <!-- <div style="padding-bottom: 1em">
+          <label style="padding-right: 0.8rem">Preffered Pronouns</label>
+          <input type="text" style="width: 7em" />
+        </div> -->
+
+      <div style="padding-bottom: 1em">
+        <label class="text-light">Email<span> *</span></label>
+        <input type="text" placeholder="xyz@email.com" id="email" />
+      </div>
+
+      <div style="padding-bottom: 1em">
+        <label class="text-light"
+          >Cell Phone<span class="text-light"> *</span></label
+        >
+        <input type="text" id="number" />
+      </div>
+
+      <div style="padding-bottom: 1em">
+        <label class="text-light">Password<span> *</span></label>
+        <input type="password" id="pass" />
+      </div>
+
+      <div style="padding-bottom: 1em" class="pb-4">
+        <label class="text-light">Confirm Password<span> *</span></label>
+        <input type="password" id="Cpass" />
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="container text-center">
+      <button
+        type="submit"
+        class="btn btn-primary center align-middle mb-4 mt-3"
+        onclick="formValidate()"
+      >
+        Submit
+      </button>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid bg-dark fixed-bottom">
+      <footer class="py-1">
+        <div
+          class="d-flex justify-content-between py-2 my-3 border-top text-light"
+        >
+          <p>© 2022 Prachet Shah. All rights reserved.</p>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3">
+              <a
+                class="text-light"
+                href="https://github.com/PrachetShah"
+                target="_blank"
+                ><i class="social-icon fab fa-github"></i
+              ></a>
+            </li>
+            <li class="ms-3">
+              <a
+                class="text-light"
+                href="https://www.hackerrank.com/prachetshah25?hr_r=1"
+                target="_blank"
+                ><i class="social-icon fab fa-hackerrank"></i
+              ></a>
+            </li>
+            <li class="ms-3">
+              <a
+                class="text-light"
+                href="https://www.linkedin.com/in/prachet-shah/"
+                target="_blank"
+                ><i class="social-icon fab fa-linkedin"></i
+              ></a>
+            </li>
+            <li class="ms-3">
+              <a
+                class="text-light"
+                href="https://www.instagram.com/prachetshah/"
+                target="_blank"
+                ><i class="social-icon fab fa-instagram"></i
+              ></a>
+            </li>
+            <li class="ms-3">
+              <a class="text-light" href="mailto:prachetshah25@gmail.com"
+                ><i class="social-icon far fa-envelope"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
