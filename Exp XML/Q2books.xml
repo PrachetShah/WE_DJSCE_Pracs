@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Books SYSTEM "Q2stck.dtd">
+<Books>
+    <bookname>plp</bookname>
+    <author1>john</author1>
+    <author2>dooe</author2>
+    <price>123</price>
+    <year>2022</year>
+</Books>
