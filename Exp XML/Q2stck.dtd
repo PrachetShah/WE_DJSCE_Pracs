@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!ELEMENT Books (bookname, author1, author2, price, year)>
+<!ELEMENT bookname (#PCDATA)>
+<!ELEMENT author1 (#PCDATA)>
+<!ELEMENT author2 (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
